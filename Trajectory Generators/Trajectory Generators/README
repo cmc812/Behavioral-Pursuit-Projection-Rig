@@ -1,0 +1,12 @@
+Section 0: Initial Setup
+Section 0.1: Downloading the Program
+To download the program, navigate to the server and open the Code folder
+Transfer “Trajectory Generators.zip” to your device
+Double click on the file to unzip the folder. You may now continue to Section 0.2 to download the requirements needed to run the program
+Section 0.2: Downloading the Program Requirements
+In Finder (File Explorer on Windows), right click on the unzipped Trajectory Generators folder
+To right click on Mac, click using 2 fingers
+In the menu that opens, click on New Terminal at Folder
+A terminal window should open up. Wait to see “Trajectory Generators %” before proceeding to Step 4
+
+Type in “pip install -r requirements.txt” and press Enter. Everything should be ready to go! Proceed to Section 1 to open the program
