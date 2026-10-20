@@ -1,0 +1,7 @@
+pandas
+numpy
+rdp
+PyQt5
+PyQt6
+pyqtgraph
+dearpygui
