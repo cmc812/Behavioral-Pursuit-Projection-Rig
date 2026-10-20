@@ -90,42 +90,6 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:LoadImage">
-                <cv:FileName>C:\Users\psych-aalab\Downloads\f1_sprite.png</cv:FileName>
-                <cv:Mode>Unchanged</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:Flip">
-                <cv:Mode>Vertical</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="gl:UpdateTexture">
-                <gl:TextureName>f1</gl:TextureName>
-                <gl:TextureTarget>Texture2D</gl:TextureTarget>
-                <gl:InternalFormat>Rgba</gl:InternalFormat>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:LoadImage">
-                <cv:FileName>f3sprite_t.png</cv:FileName>
-                <cv:Mode>Unchanged</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:Flip">
-                <cv:Mode>Vertical</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="gl:UpdateTexture">
-                <gl:TextureName>f3</gl:TextureName>
-                <gl:TextureTarget>Texture2D</gl:TextureTarget>
-                <gl:InternalFormat>Rgba</gl:InternalFormat>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:LoadImage">
                 <cv:FileName>Trial_CSVs\Mixed\Shapes\Green Shapes\greendot.png</cv:FileName>
                 <cv:Mode>Unchanged</cv:Mode>
               </Combinator>
@@ -138,24 +102,6 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="gl:UpdateTexture">
                 <gl:TextureName>RP</gl:TextureName>
-                <gl:TextureTarget>Texture2D</gl:TextureTarget>
-                <gl:InternalFormat>Rgba</gl:InternalFormat>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:LoadImage">
-                <cv:FileName>Trial_CSVs\Mixed\Shapes\Cyan Shapes\cyan_cheese.png</cv:FileName>
-                <cv:Mode>Unchanged</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="cv:Flip">
-                <cv:Mode>Vertical</cv:Mode>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="gl:UpdateTexture">
-                <gl:TextureName>Cheese</gl:TextureName>
                 <gl:TextureTarget>Texture2D</gl:TextureTarget>
                 <gl:InternalFormat>Rgba</gl:InternalFormat>
               </Combinator>
@@ -438,6 +384,10 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="res:LoadResources" />
             </Expression>
+            <Expression xsi:type="Annotation">
+              <Name>End Session</Name>
+              <Text><![CDATA[Use "Ctrl+Space" to stop the workflow]]></Text>
+            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
                 <wie:Filter>Space Control</wie:Filter>
@@ -485,28 +435,23 @@
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
             <Edge From="13" To="14" Label="Source1" />
-            <Edge From="15" To="16" Label="Source1" />
-            <Edge From="16" To="17" Label="Source1" />
-            <Edge From="18" To="19" Label="Source1" />
+            <Edge From="15" To="17" Label="Source1" />
+            <Edge From="16" To="17" Label="Source2" />
+            <Edge From="17" To="19" Label="Source1" />
+            <Edge From="18" To="19" Label="Source2" />
             <Edge From="19" To="20" Label="Source1" />
+            <Edge From="20" To="21" Label="Source1" />
             <Edge From="21" To="22" Label="Source1" />
-            <Edge From="22" To="23" Label="Source1" />
-            <Edge From="24" To="26" Label="Source1" />
-            <Edge From="25" To="26" Label="Source2" />
-            <Edge From="26" To="28" Label="Source1" />
-            <Edge From="27" To="28" Label="Source2" />
-            <Edge From="28" To="29" Label="Source1" />
+            <Edge From="22" To="27" Label="Source1" />
+            <Edge From="22" To="29" Label="Source1" />
+            <Edge From="23" To="24" Label="Source1" />
+            <Edge From="24" To="25" Label="Source1" />
+            <Edge From="25" To="26" Label="Source1" />
+            <Edge From="26" To="27" Label="Source2" />
+            <Edge From="27" To="28" Label="Source1" />
             <Edge From="29" To="30" Label="Source1" />
-            <Edge From="30" To="31" Label="Source1" />
-            <Edge From="31" To="35" Label="Source1" />
-            <Edge From="31" To="37" Label="Source1" />
-            <Edge From="32" To="33" Label="Source1" />
-            <Edge From="33" To="34" Label="Source1" />
-            <Edge From="34" To="35" Label="Source2" />
-            <Edge From="35" To="36" Label="Source1" />
-            <Edge From="37" To="38" Label="Source1" />
-            <Edge From="38" To="40" Label="Source1" />
-            <Edge From="39" To="40" Label="Source2" />
+            <Edge From="30" To="32" Label="Source1" />
+            <Edge From="31" To="32" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
@@ -697,13 +642,6 @@
             <Expression xsi:type="MemberSelector">
               <Selector>Position</Selector>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="FloatProperty">
-                  <Value>350</Value>
-                </Combinator>
-              </Builder>
-            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
                 <Value>320</Value>
@@ -711,13 +649,6 @@
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>Sub X</Name>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="FloatProperty">
-                  <Value>300</Value>
-                </Combinator>
-              </Builder>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
@@ -727,13 +658,6 @@
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>Div X</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="FloatProperty">
-                  <Value>254</Value>
-                </Combinator>
-              </Builder>
-            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
                 <Value>240</Value>
@@ -741,13 +665,6 @@
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>Sub Y</Name>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="FloatProperty">
-                  <Value>215</Value>
-                </Combinator>
-              </Builder>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
@@ -766,15 +683,6 @@
   (-(it.Item1.X - it.Item2)/it.Item3) as Nose_X,
   ((it.Item1.Y - it.Item4)/it.Item5) as Nose_Y
 )</scr:Expression>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="scr:ExpressionTransform">
-                <scr:Name>Test Tracking</scr:Name>
-                <scr:Expression>new(
-  -0.33 as Nose_X,
-  0.066 as Nose_Y
-)</scr:Expression>
-              </Builder>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>Nose Location</Name>
@@ -855,39 +763,34 @@
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
-            <Edge From="2" To="15" Label="Source1" />
+            <Edge From="2" To="11" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
-            <Edge From="4" To="5" Label="Source1" />
-            <Edge From="5" To="15" Label="Source2" />
-            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="4" To="11" Label="Source2" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="11" Label="Source3" />
             <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="15" Label="Source3" />
+            <Edge From="8" To="11" Label="Source4" />
             <Edge From="9" To="10" Label="Source1" />
-            <Edge From="10" To="11" Label="Source1" />
-            <Edge From="11" To="15" Label="Source4" />
+            <Edge From="10" To="11" Label="Source5" />
+            <Edge From="11" To="12" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="14" Label="Source1" />
-            <Edge From="14" To="15" Label="Source5" />
+            <Edge From="13" To="15" Label="Source1" />
+            <Edge From="14" To="15" Label="Source2" />
             <Edge From="15" To="16" Label="Source1" />
-            <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
-            <Edge From="18" To="20" Label="Source1" />
-            <Edge From="19" To="20" Label="Source2" />
+            <Edge From="17" To="22" Label="Source1" />
+            <Edge From="18" To="19" Label="Source1" />
+            <Edge From="19" To="22" Label="Source2" />
             <Edge From="20" To="21" Label="Source1" />
-            <Edge From="22" To="27" Label="Source1" />
+            <Edge From="21" To="22" Label="Source3" />
             <Edge From="23" To="24" Label="Source1" />
-            <Edge From="24" To="27" Label="Source2" />
-            <Edge From="25" To="26" Label="Source1" />
-            <Edge From="26" To="27" Label="Source3" />
-            <Edge From="28" To="29" Label="Source1" />
-            <Edge From="29" To="30" Label="Source1" />
-            <Edge From="30" To="35" Label="Source1" />
-            <Edge From="31" To="35" Label="Source2" />
-            <Edge From="32" To="35" Label="Source3" />
-            <Edge From="33" To="35" Label="Source4" />
-            <Edge From="34" To="35" Label="Source5" />
-            <Edge From="35" To="36" Label="Source1" />
-            <Edge From="36" To="37" Label="Source1" />
+            <Edge From="24" To="25" Label="Source1" />
+            <Edge From="25" To="30" Label="Source1" />
+            <Edge From="26" To="30" Label="Source2" />
+            <Edge From="27" To="30" Label="Source3" />
+            <Edge From="28" To="30" Label="Source4" />
+            <Edge From="29" To="30" Label="Source5" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -924,29 +827,6 @@
               <Name>ArduinoBuffer</Name>
               <rx:BufferSize>1</rx:BufferSize>
             </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Timestamp" />
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>Filename</Name>
-            </Expression>
-            <Expression xsi:type="Format">
-              <Format>{0}_LED_.csv</Format>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="FileName" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="io:CsvWriter">
-              <io:FileName>E:/Xiaoxiao_pursuit/pp_Int/10022026/PP40/GPA2/PP40_GPA2__LED_.csv</io:FileName>
-              <io:Delimiter>,</io:Delimiter>
-              <io:ListSeparator>,</io:ListSeparator>
-              <io:Append>false</io:Append>
-              <io:Overwrite>false</io:Overwrite>
-              <io:Suffix>Timestamp</io:Suffix>
-              <io:IncludeHeader>true</io:IncludeHeader>
-            </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>Stop Workflow</Name>
             </Expression>
@@ -982,22 +862,17 @@
             <Edge From="2" To="3" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
-            <Edge From="6" To="7" Label="Source1" />
-            <Edge From="7" To="11" Label="Source1" />
+            <Edge From="6" To="8" Label="Source1" />
+            <Edge From="7" To="8" Label="Source2" />
             <Edge From="8" To="9" Label="Source1" />
-            <Edge From="9" To="10" Label="Source1" />
-            <Edge From="10" To="11" Label="Source2" />
-            <Edge From="11" To="13" Label="Source1" />
-            <Edge From="12" To="13" Label="Source2" />
-            <Edge From="13" To="14" Label="Source1" />
-            <Edge From="15" To="16" Label="Source1" />
-            <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
       <Expression xsi:type="io:CsvReader">
-        <io:FileName>Trial_CSVs\Gap_Testing\Mixed\VM21A-MixedRP61-CP21-gCP21-gf1_10t\Fri\PAM21A-5\PAM21A-5_speed10-35.csv</io:FileName>
+        <io:FileName>TRAJECTORYCSVFILEPATH</io:FileName>
         <io:ListSeparator>,</io:ListSeparator>
         <io:ScanPattern>%d</io:ScanPattern>
         <io:SkipRows>1</io:SkipRows>
@@ -1122,7 +997,7 @@ def process(value):
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>GPA2</Value>
+          <Value>SESSIONNAME</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
@@ -1130,7 +1005,7 @@ def process(value):
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
-          <Value>40</Value>
+          <Value>ANIMAL</Value>
         </Combinator>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
@@ -2568,7 +2443,7 @@ def process(value):
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="ffmpeg:VideoWriter">
-                <ffmpeg:FileName />
+                <ffmpeg:FileName>E:/project/run/10192026/ANIMAL/SESSIONNAME.avi</ffmpeg:FileName>
                 <ffmpeg:Suffix>Timestamp</ffmpeg:Suffix>
                 <ffmpeg:Overwrite>false</ffmpeg:Overwrite>
                 <ffmpeg:FrameRate>30</ffmpeg:FrameRate>
@@ -2628,7 +2503,7 @@ def process(value):
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="io:CsvWriter">
-              <io:FileName />
+              <io:FileName>E:/project/run/10192026/ANIMAL/SESSIONNAME.csv</io:FileName>
               <io:Append>false</io:Append>
               <io:Overwrite>false</io:Overwrite>
               <io:Suffix>Timestamp</io:Suffix>
